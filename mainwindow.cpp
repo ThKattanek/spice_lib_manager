@@ -183,12 +183,12 @@ void MainWindow::on_pushButton_search_clicked()
         ui->search_matches->insertRow(ui->search_matches->rowCount());
 
         // name
-        QTableWidgetItem *itm = new QTableWidgetItem( item_list[i]->text(0));
-        ui->search_matches->setItem(ui->search_matches->rowCount()-1,0,itm);
+        QTableWidgetItem *itm1 = new QTableWidgetItem( item_list[i]->text(0));
+        ui->search_matches->setItem(ui->search_matches->rowCount()-1,0,itm1);
 
         // library
-        itm = new QTableWidgetItem( item_list[i]->parent()->text(0));
-        ui->search_matches->setItem(ui->search_matches->rowCount()-1,1,itm);
+        QTableWidgetItem *itm2 = new QTableWidgetItem( item_list[i]->parent()->text(0));
+        ui->search_matches->setItem(ui->search_matches->rowCount()-1,1,itm2);
     }
 
 }
